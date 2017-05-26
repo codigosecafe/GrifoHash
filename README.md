@@ -32,7 +32,7 @@ $senha_gerada = $grifo::make_password($senha_digitada);
 // Agora basta armazenar o valor da variavel $senha_gerada no campo senha da tabela do seu banco de dados
 ```
 #### check_pass()
-Método responsável por comparar e validar o hashing da senha. Já que você estamos trabalhando com um hashing gerado aleatoriamente, seria impossível gerar um novo hash indentico ao hash que está no banco. mas o método bcrypt/blowfish permite que eu consiga validar a senha. Ex:.
+Método responsável por comparar e validar o hashing da senha. Já que estamos trabalhando com um hashing gerado aleatoriamente, seria impossível gerar um novo hash indentico ao hash que está no banco. mas o método bcrypt/blowfish permite que eu consiga validar a senha. Ex:.
 ```php
 <?php 
 // Senha digitada pelo usuario
