@@ -13,7 +13,7 @@ Para adicionar a classe basta incluir em seu arquivo através do método include
 ```php
 <?php 
 // Importo a classe
-include_once 'grifo.class.php';
+include_once 'class/grifo.class.php';
 // Instancio a classe Grifo
 $grifo = new Grifo();
 ```
