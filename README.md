@@ -45,6 +45,9 @@ if ($grifo::check_pass($senha_digitada, $senha_DB)) {
 ```
 ###### Obs.: Caso tenha coriosidade como funciona todos os métodos da classe você pode ler o códigos font no arquivo grifo.class.php na pasta class.
 ---
+
 Author: Claudio Alexssandro Lino <claudio@codigosecafe.com.br>
+
 [https://www.facebook.com/codigosecafe.agencia.digital/](https://www.facebook.com/codigosecafe.agencia.digital/)
+
 [http://codigosecafe.com.br/](http://codigosecafe.com.br/)
