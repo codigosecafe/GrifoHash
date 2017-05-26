@@ -35,6 +35,9 @@ $senha_gerada = $grifo::make_password($senha_digitada);
 Método responsável por comparar e validar o hashing da senha. Já que você estamos trabalhando com um hashing gerado aleatoriamente, seria impossível gerar um novo hash indentico ao hash que está no banco. mas o método bcrypt/blowfish permite que eu consiga validar a senha. Ex:.
 ```php
 <?php 
+// Senha digitada pelo usuario
+$senha_digitada = '1q2w3e4r'; // a senha pode ser coletada via o método $_POST ou $_GET
+
 // Para comparar a senha digitada com a senha salva no bando de dados
 // primeiro devo buscar a senha a ser comparada no banco
 // e atribuir ela a uma variavel 
@@ -42,9 +45,9 @@ $senha_DB = '$2a$08$MTU4NDc5MDAxNDU5Mjc5Z.Nx0ZOYEiUDaOpyEMHZNNUYuJDHRgzI2'; // S
 
 // Agora basta rodar o metodo de checagem dos hashing
 if ($grifo::check_pass($senha_digitada, $senha_DB)) {
-	echo 'Senha OK!';
+    echo 'Senha OK!';
 } else {
-	echo 'Senha incorreta!';
+    echo 'Senha incorreta!';
 }
 ```
 ###### Obs.: Caso tenha coriosidade como funciona todos os métodos da classe você pode ler o códigos font no arquivo grifo.class.php na pasta class.
