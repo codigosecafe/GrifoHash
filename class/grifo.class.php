@@ -53,7 +53,7 @@ class Grifo
 
     /**
     * Método responsável por comparar e validar o hashing da senha. 
-    * Já que você estamos trabalhando com um hashing gerado aleatoriamente, seria impossível 
+    * Já que estamos trabalhando com um hashing gerado aleatoriamente, seria impossível 
     * gerar um novo hash indentico ao hash que está no banco. mas o método bcrypt/blowfish permite que eu consiga validar a senha.
     *
     * @param  $password, $passwordDB
