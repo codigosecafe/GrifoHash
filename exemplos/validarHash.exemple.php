@@ -1,7 +1,7 @@
 <?php 
 
 // Importo a classe
-include_once 'class/grifo.class.php';
+include_once '../class/grifo.class.php';
 // Instancio a classe Grifo
 $grifo = new Grifo();
 
