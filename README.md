@@ -19,7 +19,7 @@ $grifo = new Grifo();
 ```
 ---
 ## Principais métodos da classe Grifo
-#### make_password()
+#### ::make_password()
 Método responsável por gerar o hashing da senha que será armazenada no banco de dados. Indenpedente da senha sempre será gerado um hashing unico. Bom lembrar que o hash sempre será composto de 60 caracteres, então você pode definir a sua coluna que armazena a senha com CHAR(60) ou VARCHAR(60), claro se você estiver usando o MySQL. ;)
 ##### Criptografando senhas
 Para criptografar a senha basta atribuir o valor digitado pelo usuario a uma variavel e execultar o método make_password(). Ex.:
@@ -31,7 +31,7 @@ $senha_digitada = '1q2w3e4r'; // a senha pode ser coletada via o método $_POST 
 $senha_gerada = $grifo::make_password($senha_digitada);
 // Agora basta armazenar o valor da variavel $senha_gerada no campo senha da tabela do seu banco de dados
 ```
-#### check_pass()
+#### ::check_pass()
 Método responsável por comparar e validar o hashing da senha. Já que estamos trabalhando com um hashing gerado aleatoriamente, seria impossível gerar um novo hash indentico ao hash que está no banco. mas o método bcrypt/blowfish permite que eu consiga validar a senha. Ex:.
 ```php
 <?php 
