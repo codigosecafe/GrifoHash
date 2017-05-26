@@ -2,7 +2,7 @@
 Espero que possa ajudar como o hashing das senhas do seu sistema
 
 ## Sobre a classe Grifo
-Grifo é uma classe PHP para gerar hashing de senha e validação da mesma.
+Grifo é uma classe PHP para gerar hashing de senha e validação.
 A classe Grifo tem esse nome como sinonimo da palavra enigma inspirado no filme **O Jogo da Imitação**. 
 Com uma ideia bem simples, de juntar alguns metodos de codificação e geração de hash para tornar a senha um pouco mais segura do que utilizar apenas um método como MD5, SHA-1 SHA-256 ou SHA-512. Esses métodos cumprem o que promete mas são notavelmente inseguros. A classe Grifo além de usuflir de alguns desses métodos finaliza o hashing com o padrão  bcrypt/blowfish. 
 
