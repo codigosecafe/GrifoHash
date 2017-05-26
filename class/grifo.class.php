@@ -79,7 +79,6 @@ class Grifo
     {
     	if ($randon):
     		$base = uniqid(mt_rand(), true);
-    		echo "$base";
     	endif;
     	// Codifico a string atraves do metodo base64_encode
     	$base = base64_encode($base);
