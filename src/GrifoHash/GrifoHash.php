@@ -1,5 +1,5 @@
 <?php
-
+namespace codigosecafe;
 /**
  * Grifo é uma classe PHP para gerar hashing de senha e validação.
  * A classe Grifo tem esse nome como sinonimo da palavra enigma inspirado no filme **O Jogo da Imitação**. 
@@ -11,9 +11,9 @@
  * 
  * @author Claudio Alexssandro Lino <claudio@codigosecafe.com.br>
  * @link   https://github.com/codigosecafe/grifo-hash-php
- * @date 26/05/2017
+ * @date 21/01/2018
  */
-class Grifo
+class GrifoHash
 {
 
 	protected static $Prefix_salt = '2a'; // isso habilita o blowfish para que seja usado

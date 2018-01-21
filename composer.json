@@ -1,0 +1,38 @@
+{
+    "name": "codigosecafe/GrifoHash",
+    "type": "library",
+    "description": "Grifo é uma classe PHP para gerar hashing de senha e validação.",
+    "keywords": ["codigosecafe","GrifoHash", "password", "MD5"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Claudio Alexssandro Lino",
+            "email": "codigosecafe+GrifoHash@gmail.com",
+            "homepage": "http://codigosecafe.com.br",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues":     "https://github.com/codigosecafe/GrifoHash/issues",
+        "email":      "codigosecafe+suporteGrifoHash@gmail.com",
+        "source":     "https://github.com/codigosecafe/GrifoHash"
+      },
+    
+    "require": {
+         "php": ">=5.5.9"
+    },
+    "autoload": {
+       "psr-4": {
+            "codigosecafe\\": "src/GrifoHash/"
+        }
+    },
+    
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v2.0.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

@@ -12,10 +12,10 @@ Com uma ideia bem simples, de juntar alguns metodos de codificação e geração
 Para adicionar a classe basta incluir em seu arquivo através do método include_once(); Ex.:
 ```php
 <?php 
-// Importo a classe
-include_once 'class/grifo.class.php';
-// Instancio a classe Grifo
-$grifo = new Grifo();
+use codigosecafe\GrifoHash;
+
+// Instancio a classe GrifoHash
+$GrifoHash = new GrifoHash();
 ```
 ---
 ## Principais métodos da classe Grifo
@@ -25,16 +25,34 @@ Método responsável por gerar o hashing da senha que será armazenada no banco 
 Para criptografar a senha basta atribuir o valor digitado pelo usuario a uma variavel e execultar o método make_password(). Ex.:
 ```php
 <?php 
+use codigosecafe\GrifoHash;
+
+// Instancio a classe GrifoHash
+$GrifoHash = new GrifoHash();
+
+//####################################################################// 
+
 // Senha digitada pelo usuario
 $senha_digitada = '1q2w3e4r'; // a senha pode ser coletada via o método $_POST ou $_GET
 // Gero o hashing da senha para ser salva no banco de dados
 $senha_gerada = $grifo::make_password($senha_digitada);
 // Agora basta armazenar o valor da variavel $senha_gerada no campo senha da tabela do seu banco de dados
+echo "Senha gerada com hashing aleatorio e unico<br/>";
+echo "<b>$senha_gerada</b>";
+echo "<br/>Se a pagina for atualizada sera gerado outro hash<br/>";
+
 ```
 #### ::check_pass()
 Método responsável por comparar e validar o hashing da senha. Já que estamos trabalhando com um hashing gerado aleatoriamente, seria impossível gerar um novo hash indentico ao hash que está no banco. mas o método bcrypt/blowfish permite que eu consiga validar a senha. Ex:.
 ```php
 <?php 
+use codigosecafe\GrifoHash;
+
+// Instancio a classe GrifoHash
+$GrifoHash = new GrifoHash();
+
+//####################################################################// 
+
 // Senha digitada pelo usuario
 $senha_digitada = '1q2w3e4r'; // a senha pode ser coletada via o método $_POST ou $_GET
 
@@ -44,11 +62,12 @@ $senha_digitada = '1q2w3e4r'; // a senha pode ser coletada via o método $_POST 
 $senha_DB = '$2a$08$MTU4NDc5MDAxNDU5Mjc5Z.Nx0ZOYEiUDaOpyEMHZNNUYuJDHRgzI2'; // Senha salva no banco de dados com 60 caracters
 
 // Agora basta rodar o metodo de checagem dos hashing
-if ($grifo::check_pass($senha_digitada, $senha_DB)) {
+if ($GrifoHash::check_pass($senha_digitada, $senha_DB)) {
     echo 'Senha OK!';
 } else {
     echo 'Senha incorreta!';
 }
+
 ```
 ###### Obs.: Caso tenha coriosidade como funciona todos os métodos da classe você pode ler o códigos font no arquivo grifo.class.php na pasta class.
 ---
