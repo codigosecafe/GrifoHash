@@ -3,7 +3,7 @@ Espero que possa ajudar como o hashing das senhas do seu sistema. Essa classe fo
 
 Instalação
 ```
-composer require codigosecafe/grifo-hash dev-master
+composer require codigosecafe/grifo-hash
 ```
 
 ## Sobre a classe GrifoHash
