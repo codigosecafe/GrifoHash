@@ -23,7 +23,7 @@
     },
     "autoload": {
        "psr-4": {
-            "CodigoseCafe\\": "src/GrifoHash/"
+            "codigosecafe\\": "src/GrifoHash/"
         }
     }
 }
