@@ -8,7 +8,7 @@
         {
             "name": "Claudio Alexssandro Lino",
             "email": "codigosecafe+GrifoHash@gmail.com",
-            "homepage": "http://codigosecafe.com.br",
+            "homepage": "https://github.com/codigosecafe",
             "role": "Developer"
         }
     ],
@@ -23,7 +23,7 @@
     },
     "autoload": {
        "psr-4": {
-            "codigosecafe\\": "src/GrifoHash/"
+            "CodigoseCafe\\": "src/GrifoHash/"
         }
     }
 }
