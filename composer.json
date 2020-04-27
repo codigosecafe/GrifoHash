@@ -25,10 +25,5 @@
        "psr-4": {
             "codigosecafe\\": "src/GrifoHash/"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.2-dev"
-        }
     }
 }
