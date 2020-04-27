@@ -27,7 +27,7 @@ class GrifoHash
     public function __construct()
     {
 
-        $tokenBase = self::hashBase64($_SERVER ['SERVER_NAME']);
+        $tokenBase = self::hashBase64($_SERVER ['REQUEST_URI']);
     	self::$_token = crypt( $tokenBase , self::$Prefix_salt );
 
     }
